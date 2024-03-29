@@ -2,8 +2,8 @@ import React, {useEffect} from "react";
 import { Button } from "@mui/material";
 
 interface PopUpProps {
-  setState?: boolean;
-  triggerState?: (state: boolean) => void;
+  setState: boolean;
+  triggerState: (state: boolean) => void;
 }
 
 export default function PopUp({setState, triggerState}: PopUpProps) {

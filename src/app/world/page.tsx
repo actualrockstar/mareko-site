@@ -10,7 +10,7 @@ import Icon from "..//icon";
 export default function Page2() {
   const embed = useRef(); // We use a ref instead of state to avoid rerenders.
   
-  const handleReady = (e) => {
+  const handleReady = (e: undefined) => {
     embed.current = e;
   };
 
