@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: white;
+  --background-start-rgb: #E3A1D9;
+  --background-end-rgb: #E08AC2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: var(--foreground-rgb);
+  background: var(--background-start-rgb);
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=46763"), auto;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

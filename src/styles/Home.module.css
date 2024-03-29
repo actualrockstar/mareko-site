@@ -1,0 +1,54 @@
+.main{
+    position: relative;
+    background-color: #35212E;
+    width: 100vw;
+    height: 250vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+.background{
+    position: fixed;
+    height: 110vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+.body{
+    top: 200px;
+    position: absolute;
+    width: 100%;
+
+}
+.body div{
+    margin: auto;
+}
+.body > div {
+    margin: 10% auto 0;
+}
+.footer{
+    display: flex;
+    color: white;
+    position: relative;
+    margin-top: 25%;
+    bottom: 0;
+}
+.window{
+    position: static;
+    border-style: outset;
+    width: max-content;
+    border-width: 5px;
+    background-color: #9B74AA;
+
+}
+.content{
+    border-style: inset;
+    border-width: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.content img{
+    width: 14vmax;
+    height: auto;
+}
