@@ -1,7 +1,12 @@
 import React, {useEffect} from "react";
 import { Button } from "@mui/material";
 
-export default function PopUp({setState, triggerState}) {
+interface PopUpProps {
+  setState?: boolean;
+  triggerState?: (state: boolean) => void;
+}
+
+export default function PopUp({setState, triggerState}: PopUpProps) {
     
     return (
     <div className="bg-sky-400 text-center border-double border-4 w-[50vw] absolute inset-x-0 border-slate-300">
