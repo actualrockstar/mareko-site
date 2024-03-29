@@ -3,16 +3,14 @@
 import Link from 'next/link'
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
-import { TwitchEmbed } from 'react-twitch-embed';
+import { TwitchEmbed, TwitchEmbedInstance } from 'react-twitch-embed';
 import { useRef } from 'react';
 import Icon from "..//icon";
 
+
+
 export default function Page2() {
-  const embed = useRef(); // We use a ref instead of state to avoid rerenders.
-  
-  const handleReady = (e: undefined) => {
-    embed.current = e;
-  };
+
 
   return (
     <div className={styles.main}>
@@ -58,7 +56,7 @@ export default function Page2() {
         <div className={styles.window}>
           <Link href="https://www.twitch.tv/bbymalachite">MALACHITE TV</Link>
           <div className={styles.content}>
-          <TwitchEmbed width={"90vw"} channel="bbymalachite" autoplay muted withChat darkMode={false} hideControls onVideoReady={handleReady} />
+          <TwitchEmbed width={"90vw"} channel="bbymalachite" autoplay muted withChat darkMode={false} hideControls  />
           </div>
         </div>
       </div>
