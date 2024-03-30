@@ -5,7 +5,8 @@ import styles from "../styles/Home.module.css";
 import ExitButton from "./exitButton";
 import React, {useState} from "react";
 import PopUp from "./popUp";
-import Icon from "./icon";
+import Icon from "./api/icon";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const clickIntro = () => {
@@ -14,13 +15,16 @@ export default function Home() {
   }
   const [showPopUp, setShowPopUp] = useState(true);
 
+  const Icons = dynamic(() => import('./api/icon'), {
+    ssr: false,
+  })
 
   return (
     <div className={styles.main}>
       
       <div className={styles.background}>
         <h1 className="static z-0 right-0 top-[10%] text-[9vh]">mareko</h1>
-        <Icon></Icon>
+        <Icons />
         <Image className='relative -z-10' 
           src='/phone-trans.png' 
           fill={true} 
@@ -59,9 +63,9 @@ export default function Home() {
       <div>
         <div className={styles.window}>
           <Link href="/shop">SHOP</Link>
-          <div className={styles.content}>
+          <div className={styles.content} >
             <a href="/shop">
-            <Image src='/infinite-void.gif' width={800} height={800} alt={"INFINITE VOID"}></Image>
+            <img src='/infinite-void.gif' alt='infinite void'/>
             </a>
           </div>
         </div>

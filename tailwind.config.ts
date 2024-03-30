@@ -16,7 +16,7 @@ const config: Config = {
       animation: {
         'spin-slow': 'spin 10s ease infinite',
         'bounce-slow': 'bounce 2.5s ease infinite',
-      }
+      },
     },
   },
   plugins: [],

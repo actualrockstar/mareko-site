@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { TwitchEmbed, TwitchEmbedInstance } from 'react-twitch-embed';
 import { useRef } from 'react';
-import Icon from "..//icon";
+import Icon from "../api/icon";
 
 
 
@@ -61,13 +61,12 @@ export default function Page2() {
         </div>
       </div>
       
-      <footer className={styles.footer}>
-        <div>
+      <footer className='relative flex mt-[25%]'>
+        
             <Link href="/"><img className="w-[25%] animate-bounce-slow" src="./star-silver.png"></img></Link>
-        </div>  
-        <div>  
+        
             <Link href='./contact'> <img className="top-0 w-[50%]" src="nokia.gif"></img></Link>
-       </div>
+      
        
       </footer>
       <div className='absolute left-3'><p>malachite media 2024</p></div>

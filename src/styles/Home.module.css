@@ -48,6 +48,7 @@
     display: flex;
     justify-content: center;
 }
+
 .content img{
     width: 14vmax;
     height: auto;
