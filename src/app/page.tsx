@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import ExitButton from "./exitButton";
+import ExitButton from "./components/exitButton";
 import React, {useState} from "react";
 import PopUp from "./popUp";
 import Icon from "./components/icon";
