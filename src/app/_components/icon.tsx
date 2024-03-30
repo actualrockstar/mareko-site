@@ -23,7 +23,7 @@ export default function Icon() {
     return (
     <div className='flex flex-wrap pt-[8vh] pl-[4vw] pr-[4vw] z-10 text-clip justify-normal'>
         {imageArray.map((item, i) => (
-           <div className='w-[15vw] max-w-[100px] h-auto text-center text-[2vw]' key={i}> 
+           <div className='w-[15vw] max-w-[100px] h-auto text-center text-[1vw]' key={i}> 
                 <Image 
                     className='aspect-square'
                     src={item.file} 

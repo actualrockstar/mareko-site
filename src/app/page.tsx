@@ -56,16 +56,24 @@ export default function Home() {
         <div className={styles.window}>
           <Link href="https://www.youtube.com/@mareko5921">VIDEO</Link>
           <div className={styles.content}>
-            <iframe className="w-[60vw] aspect-video" src="https://www.youtube.com/embed/GnwDx29OBP4?si=bxEktGWsEizmvHyp" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>  
+            <iframe className="w-[60vw] aspect-video" src="https://www.youtube.com/embed/videoseries?si=Q4KAEJysa5-LtXme&amp;list=PL3uuPLiSt10sWMbA9stUR9uLxm25Olqyi" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>  
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex">
         <div className={styles.window}>
-          <Link href="/shop">SHOP</Link>
+          <Link href="/shop">MERCH</Link>
           <div className={styles.content} >
             <a href="/shop">
-            <img src='/infinite-void.gif' alt='infinite void'/>
+            <img className='' src='/infinite-void.gif' alt='infinite void'/>
+            </a>
+          </div>
+        </div>
+        <div className={styles.window}>
+          <Link href="/shop">COP THE DRIP</Link>
+          <div className={styles.content}>
+            <a href="/shop">
+            <img className='' src='/drip.gif' alt='sora drip'/>
             </a>
           </div>
         </div>
@@ -76,8 +84,11 @@ export default function Home() {
             <Link href='./contact'> <img className="animate-bounce relative right-1 top-0 w-[50%]" src="nokia.gif"></img></Link>
        </div>
         <div>
-            <Link href="/world"><img className="relative float-l w-[25%] animate-bounce-slow" src="./star-silver.png"></img></Link>
+            <Link href="/social"><img className="relative float-l w-[50%] animate-bounce-slow" src="./money.gif"></img></Link>
         </div>  
+        <div>
+          <Link href='/world'><img className= 'animate-bounce-slow w-[50%]' src="/cute-gun.gif"></img></Link>
+        </div>
 
        
       </footer>

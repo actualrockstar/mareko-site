@@ -32,13 +32,27 @@
     margin-top: 25%;
     bottom: 0;
 }
+.footer div{
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.footer div:hover{
+    transform: scale(1.2);
+}
 .window{
     position: static;
     border-style: outset;
     width: max-content;
     border-width: 5px;
     background-color: #9B74AA;
-
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+.window:hover{
+    -webkit-transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(3deg);
 }
 .content{
     border-style: inset;
@@ -50,6 +64,5 @@
 }
 
 .content img{
-    width: 14vmax;
     height: auto;
 }
