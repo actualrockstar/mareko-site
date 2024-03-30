@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { NextResponse } from 'next/server';
-import image1 from '../../public/choso.jpg';
 import dynamic from 'next/dynamic';
 
 //reference:
