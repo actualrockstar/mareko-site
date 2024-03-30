@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import ExitButton from "./exitButton";
 import React, {useState} from "react";
 import PopUp from "./popUp";
-import Icon from "./api/route";
+import Icon from "./api/icon";
 import dynamic from "next/dynamic";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   }
   const [showPopUp, setShowPopUp] = useState(true);
 
-  const Icons = dynamic(() => import('./api/route'), {
+  const Icons = dynamic(() => import('./api/icon'), {
     ssr: false,
   })
 
