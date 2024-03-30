@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import ExitButton from "./components/exitButton";
+import ExitButton from "./_components/exitButton";
 import React, {useState} from "react";
 import PopUp from "./popUp";
-import Icon from "./components/icon";
+import Icon from "./_components/icon";
 import dynamic from "next/dynamic";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   }
   const [showPopUp, setShowPopUp] = useState(true);
 
-  const Icons = dynamic(() => import('./components/icon'), {
+  const Icons = dynamic(() => import('./_components/icon'), {
     ssr: false,
   })
 

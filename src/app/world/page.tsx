@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { TwitchEmbed, TwitchEmbedInstance } from 'react-twitch-embed';
 import { useRef } from 'react';
-import Icon from "../components/icon";
+import Icon from "../_components/icon";
 
 
 
