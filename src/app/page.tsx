@@ -8,6 +8,7 @@ import PopUp from "./popUp";
 import Icon from "./_components/icon";
 import dynamic from "next/dynamic";
 
+
 export default function Home() {
   const clickIntro = () => {
     setShowPopUp(!showPopUp)
