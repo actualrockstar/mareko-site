@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar";
 
 import { useState, useRef } from 'react';
 
-import myTrack from '/backseat.mp3';
+//import myTrack from '../../../public/backseat.mp3';
 import ReactAudioPlayer from "react-audio-player";
 
 const tracks = [
