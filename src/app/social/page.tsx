@@ -66,7 +66,7 @@ export default function Page2() {
             <Link href='./contact'> <img className="animate-bounce relative right-1 top-0 w-[50%]" src="nokia.gif"></img></Link>
        </div>
         <div>
-            <Link href="/social"><img className="relative float-l w-[50%] animate-bounce-slow" src="./money.gif"></img></Link>
+            <Link href="/"><img className="relative float-l w-[50%] animate-bounce-slow" src="./money.gif"></img></Link>
         </div>  
         <div>
           <Link href='/world'><img className= 'animate-bounce-slow w-[50%]' src="/cute-gun.gif"></img></Link>

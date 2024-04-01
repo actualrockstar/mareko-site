@@ -64,18 +64,8 @@
 }
 
 .content img{
+    max-width: 30vw;
     height: auto;
 }
 
 
-.progress input[type="range"] {
-    --range-progress: 0;
-
-  }
-  
-.progress input[type="range"]::before {
-
-    background: #f50;
-    width: var(--range-progress);
-
-  }
