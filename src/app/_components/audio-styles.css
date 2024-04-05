@@ -4,33 +4,33 @@ Custom Input range
 
 /* Input range - chrome and safari */
 
-input[type="range"] {
+.progress input[type="range"] {
   --range-progress: 0;
-  
   -webkit-appearance: none;
   position: relative;
   background:#ccc;
-  width: 100%;
-  height: 2px;
+  width: 80%;
+  height: 10px;
   border-radius: 2px;
   cursor: pointer;
+  margin: 5px;
 }
 
 /* Input range - firefox */
-input[type="range"]::-moz-range-track {
+.progress input[type="range"]::-moz-range-track {
   position: relative;
   background:#ccc;
-  width: 100%;
-  height: 2px;
+  width: 80%;
+  height: 10px;
   border-radius: 2px;
   cursor: pointer;
 }
 
 /* played progress length - Chrome & safari*/
-input[type="range"]::before {
+.progress input[type="range"]::before {
   content: '';
   height: 2px;
-  background: #f50;
+  background: green;
   width: var(--range-progress);
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
@@ -40,41 +40,162 @@ input[type="range"]::before {
 }
 
 /* played progress length - firefox */
-input[type="range"]::-moz-range-progress {
-  background: #f50;
+.progress input[type="range"]::-moz-range-progress {
+  background: green;
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
   height: 2px;
 }
 
 /* slider thumb - chrome and safari */
-input[type="range"]::-webkit-slider-thumb {
+.progress input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 8px;
   width: 8px;
   border-radius: 50%;
   border: none;
-  background-color: #f50;
+  background-color: greenyellow;
   cursor: pointer;
   position: relative;
 }
 
 /* dragging thumb - chrome and safari */
-input[type="range"]:active::-webkit-slider-thumb {
+.progress input[type="range"]:active::-webkit-slider-thumb {
   transform: scale(1.2);
 }
 
 /* slider thumb - firefox */
-input[type="range"]::-moz-range-thumb {
+.progress input[type="range"]::-moz-range-thumb {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background: #f50;
+  background: greenyellow;
   cursor: pointer;
   border: transparent;
   position: relative;
 }
 /* dragging thumb - firefox */
-input[type="range"]:active::-moz-range-thumb {
+.progress input[type="range"]:active::-moz-range-thumb {
   transform: scale(1.2);
+}
+
+
+
+/* The following is trying to target styling 
+the volume knob
+         */
+.volume {
+  position: relative;
+  top: 80px;
+}
+
+              
+
+/*Input range - chrome and safari */      
+
+.volume input[type="range"] {
+  --range-progress: 0;
+  -webkit-appearance: none;
+  position: relative;
+  left: -50px;
+  background: #ffffff; /* gets overrided by style in*/
+  width: 160px;
+  height: 20px; 
+  border-radius: 3px; /*round edges*/
+  border: 1px solid #000000; /*solid black outline*/
+  cursor: pointer;
+  -webkit-transform:rotate(-90deg); /*makes slider vertical*/
+}
+
+/* Input range - firefox */
+.volume input[type="range"]::-moz-range-track {
+  position: relative;
+  background:#ffffff;
+  width: 160px;
+  height: 3px;
+  border-radius: 2px;
+  border: 1px solid #000000; /*solid black outline*/
+  cursor: pointer;
+}
+
+/* played progress length - Chrome & safari*/
+.volume input[type="range"]::before {
+  content: '';
+  height: 5px;
+  background: rgb(88, 68, 121);
+  width: var(--range-progress);
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* played progress length - firefox */
+.volume input[type="range"]::-moz-range-progress {
+  background: red;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 2px;
+  height: 2px;
+}
+
+/* slider thumb - chrome and safari */
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 15px;
+  border: solid black 1px;
+  background-color: grey;
+  cursor: pointer;
+  position: relative;
+}
+
+/* dragging thumb - chrome and safari */
+.volume input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+.volume input[type="range"]::-moz-range-thumb {
+  height: 25px;
+  width: 15px;
+  background: grey;
+  cursor: pointer;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+.volume input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+/* Scrolling Marquee*/
+.marquee {
+  height: 25px;
+  width: 420px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }

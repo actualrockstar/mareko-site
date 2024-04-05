@@ -28,7 +28,7 @@ export default function ProgressBar({progressBarRef, audioRef, timeProgress, dur
       };
 
     return (
-        <div>
+        <div className='progress'>
         <span className="time current">{formatTime(timeProgress)}</span>
         <input 
             type="range" 

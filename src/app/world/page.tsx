@@ -10,11 +10,13 @@ export default function Page3() {
         <p>imma have to ask you to leave so just click this button real quick</p>
         <Button><Link href="/"><p className='animate-bounce-slow'>$$ Back to Home $$</p></Link>
         </Button>
+        
+        
         </div>
         
-        
+        <div className='p-3'>
         <AudioPlayer></AudioPlayer>
-
         </div>
+    </div>
   );
 }

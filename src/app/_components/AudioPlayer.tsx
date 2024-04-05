@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar";
 import { useState, useRef, useEffect } from 'react';
 
 //import myTrack from '../../../public/backseat.mp3';
-import ReactAudioPlayer from "react-audio-player";
+//import ReactAudioPlayer from "react-audio-player";
 
 const tracks = [
     {
@@ -57,6 +57,13 @@ export default function AudioPlayer() {
                 setDuration={setDuration} 
                 progressBarRef={progressBarRef}
                 handleNext={handleNext}/>
+            <div>
+            <ProgressBar 
+                progressBarRef={progressBarRef} 
+                audioRef={audioRef} 
+                timeProgress={timeProgress} 
+                duration={duration}/>
+            </div>
             <Control 
                 audioRef={audioRef} 
                 progressBarRef={progressBarRef} 
@@ -66,14 +73,9 @@ export default function AudioPlayer() {
                 tracks={tracks}
                 handleNext={handleNext}
                 />
-            <div className="">
-            <ProgressBar 
-                progressBarRef={progressBarRef} 
-                audioRef={audioRef} 
-                timeProgress={timeProgress} 
-                duration={duration}/>
-            </div>
+            
         </div>
+        <div className="playlist"></div>
        
       </div>
     );

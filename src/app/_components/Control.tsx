@@ -76,6 +76,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
           }
     };
     */
+
     //volume
     const [volume, setVolume] = useState(60);
     useEffect(() => {
@@ -91,9 +92,12 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
         }
       }, [volume, audioRef, muteVolume]);
 
+      // 10 Band EQ
+      
+
       return (
-      <div>
-        <div>
+      <div className="grid grid-cols-1 grid-rows-[50px_200px_10px] justify-center bg-neutral-200 border-2 border-black">
+        <div className="flex justify-center">
             
             <Button onClick={handlePrevious}><IoPlaySkipBackSharp /></Button>
             <Button onClick={togglePlayPause}>{isPlaying ? <IoPauseSharp />:<IoPlaySharp />}</Button>
@@ -107,7 +111,10 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                     ) : (
                       <IoMdVolumeHigh />
                     )}
-            </Button>
+            </Button></div>
+        <div className="row-start-2">
+          volume
+          <div className="volume">
             <input
                 type="range"
                 min={0}
@@ -115,9 +122,30 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                 value={volume}
                 onChange={(e) => setVolume(parseInt(e.target.value))}
                 style={{
-                    background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
+                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
                 }}
                 />
+                <input
+                type="range"
+                min={0}
+                max={100}
+                value={volume}
+                style={{
+                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
+                }}
+                />
+                <input
+                type="range"
+                min={0}
+                max={100}
+                value={volume}
+                style={{
+                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
+                }}
+                />
+                
+            </div>
+            
         </div>
       </div>
     );

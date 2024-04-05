@@ -15,15 +15,14 @@ export default function DisplayTrack({currentTrack, audioRef, setDuration, progr
     };
     console.log(audioRef);
     return (
-      <div>
+      <div className="flex justify-center">
         <audio 
             src={currentTrack.src} 
             ref={audioRef}
             onLoadedMetadata={onLoadedMetadata}
             onEnded={handleNext}/>
-        <div className="audio info">
-            <h1>Now Playing</h1>
-            {currentTrack.title} {currentTrack.artist}
+        <div className="marquee">
+            <div> <span className="">{currentTrack.title} - {currentTrack.artist}</span> <span className="">{currentTrack.title} - {currentTrack.artist}</span></div> 
         </div>
       </div>
     );
