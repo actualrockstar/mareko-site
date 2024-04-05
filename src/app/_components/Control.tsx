@@ -93,7 +93,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
       }, [volume, audioRef, muteVolume]);
 
       // 10 Band EQ
-      
+
 
       return (
       <div className="grid grid-cols-1 grid-rows-[50px_200px_10px] justify-center bg-neutral-200 border-2 border-black">
@@ -134,15 +134,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                     background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
                 }}
                 />
-                <input
-                type="range"
-                min={0}
-                max={100}
-                value={volume}
-                style={{
-                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
-                }}
-                />
+                
                 
             </div>
             
