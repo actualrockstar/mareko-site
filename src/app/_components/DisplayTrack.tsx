@@ -8,7 +8,7 @@ interface DisplayTrackProps {
 
 export default function DisplayTrack({currentTrack, audioRef, setDuration, progressBarRef, handleNext}: DisplayTrackProps) {
     const onLoadedMetadata = () => {
-        console.log(audioRef.current.duration);
+        //console.log(audioRef.current.duration);
         const seconds = audioRef.current.duration;
         setDuration(seconds);
         progressBarRef.current.max = seconds;

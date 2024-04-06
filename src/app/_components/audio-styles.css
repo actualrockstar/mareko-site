@@ -29,7 +29,7 @@ Custom Input range
 /* played progress length - Chrome & safari*/
 .progress input[type="range"]::before {
   content: '';
-  height: 2px;
+  height: 9px;
   background: #7f7b5e;
   width: var(--range-progress);
   border-bottom-left-radius: 2px;
@@ -44,14 +44,14 @@ Custom Input range
   background: #7f7b5e;
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  height: 2px;
+  height: 9px;
 }
 
 /* slider thumb - chrome and safari */
 .progress input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   border: none;
   background-color: #7f7b5e;
@@ -66,8 +66,8 @@ Custom Input range
 
 /* slider thumb - firefox */
 .progress input[type="range"]::-moz-range-thumb {
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background: #7f7b5e;
   cursor: pointer;

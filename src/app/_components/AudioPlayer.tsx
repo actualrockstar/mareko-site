@@ -58,7 +58,7 @@ export default function AudioPlayer() {
 
     useEffect(() => {
         const element = audioRef.current;
-        console.log(element);
+        //console.log(element);
     })
 
     const handleNext = () => {
@@ -71,8 +71,10 @@ export default function AudioPlayer() {
           }
     };
 
-    const selectSong = () => {
-       console.log('song-selected');
+    const selectSong = (i: number) => {
+       //console.log('song-selected'+ i);
+       setTrackIndex(i);
+       setCurrentTrack(tracks[i]);
     }
 
     const bgStyle = {
@@ -113,7 +115,7 @@ export default function AudioPlayer() {
             <div className="absolute mt-6 ml-1 sm:mt-12 lg:mt-0 overflow-y-scroll overflow-x-hidden w-[90%] h-1/3 sm:h-1/3 lg:h-[30%]">
             <div className="sm:h-35">
                 {tracks.map((song, i) => (
-                    <div onClick={selectSong} className="cursor-pointer hover:bg-sky-700">
+                    <div onClick={() => selectSong(i)} className="cursor-pointer hover:bg-sky-700">
                     <span className="overflow-hidden truncate">{song.artist} - {song.title}</span>
                     </div>
                 ))}
