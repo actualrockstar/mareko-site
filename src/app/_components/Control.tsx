@@ -82,6 +82,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
     useEffect(() => {
         if (audioRef) {
           audioRef.current.volume = volume / 100;
+          console.log(audioRef);
         }
       }, [volume, audioRef]);
       const [muteVolume, setMuteVolume] = useState(false);
@@ -99,17 +100,17 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
       <div className="grid grid-cols-1 grid-rows-[70px_145px_10px] sm:grid-rows-[60px_130px_10px] lg:grid-rows-[70px_160px_10px] justify-center">
         <div className="flex justify-center">
             
-            <Button onClick={handlePrevious}><IoPlaySkipBackSharp /></Button>
-            <Button onClick={togglePlayPause}>{isPlaying ? <IoPauseSharp />:<IoPlaySharp />}</Button>
-            <Button onClick={handleNext}><IoPlaySkipForwardSharp /></Button>
+            <Button onClick={handlePrevious}><IoPlaySkipBackSharp color="white"/></Button>
+            <Button onClick={togglePlayPause}>{isPlaying ? <IoPauseSharp color="white"/>:<IoPlaySharp color="white"/>}</Button>
+            <Button onClick={handleNext}><IoPlaySkipForwardSharp color="white"/></Button>
             
             <Button onClick={() => setMuteVolume((prev) => !prev)}>
                 {muteVolume || volume < 5 ?(
-                    <IoMdVolumeOff />
+                    <IoMdVolumeOff color="white"/>
                     ) : volume < 40 ? (
-                      <IoMdVolumeLow />
+                      <IoMdVolumeLow color="white"/>
                     ) : (
-                      <IoMdVolumeHigh />
+                      <IoMdVolumeHigh color="white"/>
                     )}
             </Button></div>
         <div className="row-start-2 pt-5 sm:pt-5 lg:pt-5">
