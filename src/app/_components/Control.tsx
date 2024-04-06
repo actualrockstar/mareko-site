@@ -96,7 +96,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
 
 
       return (
-      <div className="grid grid-cols-1 grid-rows-[50px_200px_10px] justify-center bg-neutral-200 border-2 border-black">
+      <div className="grid grid-cols-1 grid-rows-[30%_180px_10px] sm:grid-rows-[50px_200px_10px] justify-center">
         <div className="flex justify-center">
             
             <Button onClick={handlePrevious}><IoPlaySkipBackSharp /></Button>
@@ -112,26 +112,28 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                       <IoMdVolumeHigh />
                     )}
             </Button></div>
-        <div className="row-start-2">
-          volume
-          <div className="volume">
+        <div className="row-start-2 pt-[8%] sm:pt-16">
+
+          <div className="volume top-1/3 sm:top-14">
             <input
+                className="w-[90px] sm:w-[120px] -left-[5%]"
                 type="range"
                 min={0}
                 max={100}
                 value={volume}
                 onChange={(e) => setVolume(parseInt(e.target.value))}
                 style={{
-                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
+                    background: `linear-gradient(to right, #da86be ${volume}%, #7f7b5e ${volume}%)`,
                 }}
                 />
                 <input
+                className="w-[90px] sm:w-[120px]"
                 type="range"
                 min={0}
                 max={100}
                 value={volume}
                 style={{
-                    background: `linear-gradient(to right, #33EFFF ${volume}%, #ccc ${volume}%)`,
+                    background: `linear-gradient(to right, #da86be ${volume}%, #7f7b5e ${volume}%)`,
                 }}
                 />
                 

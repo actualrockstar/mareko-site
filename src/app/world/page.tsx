@@ -14,7 +14,7 @@ export default function Page3() {
         
         </div>
         
-        <div className='p-3'>
+        <div className='flex justify-center p-3'>
         <AudioPlayer></AudioPlayer>
         </div>
     </div>

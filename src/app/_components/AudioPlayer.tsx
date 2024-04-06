@@ -9,7 +9,8 @@ import { render } from "react-dom";
 
 //import myTrack from '../../../public/backseat.mp3';
 //import ReactAudioPlayer from "react-audio-player";
-import bgImage from '../../../public/ps2-reko.png';
+import bgImage from '../../../public/custom-player.png';
+import { BiSolidAdjust } from "react-icons/bi";
 
 const tracks = [
     {
@@ -25,12 +26,22 @@ const tracks = [
     {
         title: 'La Decadanse',
         src:'/La Decadanse.mp3',
-        artist: 'Ron Miller and his Orchestra'
+        artist: 'Ron Miller and his whores'
     },
     {
         title: 'Noelles Theme',
         src:'/Noelles Theme.mp3',
         artist: 'Ron Miller and his Orchestra'
+    },
+    {
+        title: 'Same song but',
+        src:'/Noelles Theme.mp3',
+        artist: 'Ron Miller is a slut'
+    },
+    {
+        title: 'For testing purposes',
+        src:'/Noelles Theme.mp3',
+        artist: 'Ron schmiller'
     },
 ]
 
@@ -64,15 +75,25 @@ export default function AudioPlayer() {
        console.log('song-selected');
     }
 
+    const bgStyle = {
+        backgroundImage: `url(${bgImage.src})`,
+        backgroundColor: 'lightblue',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100%'
+    }
+
     return (
-      <div style={{backgroundImage: `url(${bgImage.src})`}} className="audio-player">
-        <div className="inner">
+      <div 
+        style={bgStyle} 
+        className="audio-player relative w-[400px] sm:w-[500px] h-[525px] sm:h-[70vh] text-sm sm:text-base">
+        <div className="inner absolute w-[100%] p-5">
+            <div className="pt-[12%] sm:pt-20">
             <DisplayTrack 
                 currentTrack={currentTrack} 
                 audioRef={audioRef} 
                 setDuration={setDuration} 
                 progressBarRef={progressBarRef}
-                handleNext={handleNext}/>
+                handleNext={handleNext}/></div>
             <div>
             <ProgressBar 
                 progressBarRef={progressBarRef} 
@@ -89,17 +110,17 @@ export default function AudioPlayer() {
                 tracks={tracks}
                 handleNext={handleNext}
                 />
-            
-        </div>
-        <div className="overflow-y-scroll overflow-x-hidden">
-            <div className="h-20">
+            <div className="absolute mt-[11%] ml-1 sm:mt-12 overflow-y-scroll overflow-x-hidden w-[90%] h-[30%] sm:h-1/3">
+            <div className="sm:h-35">
                 {tracks.map((song, i) => (
-                    <div onClick={selectSong} className="cursor-pointer">
-                    <span>{song.artist} - {song.title}</span>
+                    <div onClick={selectSong} className="cursor-pointer hover:bg-sky-700">
+                    <span className="overflow-hidden truncate">{song.artist} - {song.title}</span>
                     </div>
                 ))}
             </div>
         </div>
+        </div>
+        
       </div>
     );
   }
