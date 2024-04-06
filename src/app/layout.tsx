@@ -1,14 +1,16 @@
+
 import type { Metadata } from "next";
 import { Silkscreen } from "next/font/google";
 import "./globals.css";
 import { convertAniBinaryToCSS } from "ani-cursor";
 
 
-
 const silkscreen = Silkscreen({
   subsets: ["latin"],
   weight: "400"
 });
+
+
 
 export const metadata: Metadata = {
   title: "Mareko Offical Website",

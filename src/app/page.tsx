@@ -8,8 +8,26 @@ import PopUp from "./popUp";
 import Icon from "./_components/icon";
 import dynamic from "next/dynamic";
 
+import { useEffect } from "react";
+import { convertAniBinaryToCSS } from "ani-cursor";
+
+async function applyCursor(selector: string, aniUrl: string | URL | Request) {
+  const response = await fetch(aniUrl);
+  const data = new Uint8Array(await response.arrayBuffer());
+
+  const style = document.createElement("style");
+  style.innerText = convertAniBinaryToCSS(selector, data);
+
+  document.head.appendChild(style);
+}
+
+
 
 export default function Home() {
+  useEffect(() =>{
+    applyCursor("body", "/ani02.ani");
+   })
+
   const clickIntro = () => {
     setShowPopUp(!showPopUp)
     console.log('show pop up:' + showPopUp);
