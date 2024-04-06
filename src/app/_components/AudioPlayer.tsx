@@ -79,15 +79,15 @@ export default function AudioPlayer() {
         backgroundImage: `url(${bgImage.src})`,
         backgroundColor: 'lightblue',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100%'
+        backgroundSize: '100% 100%'
     }
 
     return (
       <div 
         style={bgStyle} 
-        className="audio-player relative w-[400px] sm:w-[500px] h-[525px] sm:h-[70vh] text-sm sm:text-base">
+        className="audio-player relative w-[390px] sm:w-[500px] h-[550px] text-sm sm:text-base">
         <div className="inner absolute w-[100%] p-5">
-            <div className="pt-[12%] sm:pt-20">
+            <div className="pt-[12%] sm:pt-20 lg:pt-12">
             <DisplayTrack 
                 currentTrack={currentTrack} 
                 audioRef={audioRef} 
@@ -110,7 +110,7 @@ export default function AudioPlayer() {
                 tracks={tracks}
                 handleNext={handleNext}
                 />
-            <div className="absolute mt-[11%] ml-1 sm:mt-12 overflow-y-scroll overflow-x-hidden w-[90%] h-[30%] sm:h-1/3">
+            <div className="absolute mt-[1vh] ml-1 sm:mt-12 lg:mt-1 overflow-y-scroll overflow-x-hidden w-[90%] h-1/4 sm:h-1/3 lg:h-[30%]">
             <div className="sm:h-35">
                 {tracks.map((song, i) => (
                     <div onClick={selectSong} className="cursor-pointer hover:bg-sky-700">

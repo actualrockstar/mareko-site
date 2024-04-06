@@ -96,7 +96,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
 
 
       return (
-      <div className="grid grid-cols-1 grid-rows-[30%_180px_10px] sm:grid-rows-[50px_200px_10px] justify-center">
+      <div className="grid grid-cols-1 grid-rows-[9vh_180px_10px] sm:grid-rows-[50px_200px_10px] lg:grid-rows-[70px_180px_10px] justify-center">
         <div className="flex justify-center">
             
             <Button onClick={handlePrevious}><IoPlaySkipBackSharp /></Button>
@@ -112,11 +112,11 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                       <IoMdVolumeHigh />
                     )}
             </Button></div>
-        <div className="row-start-2 pt-[8%] sm:pt-16">
-
-          <div className="volume top-1/3 sm:top-14">
+        <div className="row-start-2 pt-[4vh] sm:pt-16 lg:pt-8">
+          Volume
+          <div className="volume top-1/3 sm:top-14 lg:top-12">
             <input
-                className="w-[90px] sm:w-[120px] -left-[5%]"
+                className="w-[90px] sm:w-[120px] lg:w-[90px] -left-[5%] -top-2"
                 type="range"
                 min={0}
                 max={100}
@@ -127,7 +127,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                 }}
                 />
                 <input
-                className="w-[90px] sm:w-[120px]"
+                className="w-[90px] sm:w-[120px] lg:w-[90px] -top-2"
                 type="range"
                 min={0}
                 max={100}
