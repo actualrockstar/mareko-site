@@ -45,7 +45,7 @@ export default function Page3() {
         <p className="mt-6 mb-2 drop-shadow-lg text-center bg-sky-500/50">im terrible at making playlists. i prefer to just spam a single album for weeks on end, 
         but i wanted to include a playlist here so here's one i made for someone one time. </p>
         <div className="flex justify-center">
-         <iframe className="rounded-xl" src="https://open.spotify.com/embed/playlist/08GrV0mkHBaiUmY4hOpoWm?utm_source=generator" width="80%" height="352" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>         
+         <iframe className="rounded-xl" src="https://open.spotify.com/embed/playlist/08GrV0mkHBaiUmY4hOpoWm?utm_source=generator" width="80%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>         
         </div>
         <div></div>
 
