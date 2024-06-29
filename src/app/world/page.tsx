@@ -39,7 +39,7 @@ export default function Page3() {
         <p className="mt-6 mb-2 drop-shadow-lg text-center bg-sky-500/50">that time i was interviewed on Maroon Radio</p>
         <div className="flex justify-center">
           
-        <iframe width="400" height="315" src="https://www.youtube.com/embed/l2ZGvPBaRZU?si=Q-2KyVAyl_kkE3aF" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/l2ZGvPBaRZU?si=Q-2KyVAyl_kkE3aF" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>          
         </div>
 
         <p className="mt-6 mb-2 drop-shadow-lg text-center bg-sky-500/50">im terrible at making playlists. i prefer to just spam a single album for weeks on end, 
