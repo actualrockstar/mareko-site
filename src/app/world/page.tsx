@@ -4,9 +4,15 @@ import Link from "next/link";
 import AudioPlayer from "../_components/AudioPlayer";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
-import WidgetBot from '@widgetbot/react-embed';
+//import WidgetBot from '@widgetbot/react-embed';
 import styles from "../../styles/Home.module.css";
 import ZineBg from "../_components/ZineBg";
+import dynamic from "next/dynamic";
+// Dynamically import WidgetBot with no SSR
+const WidgetBot = dynamic(() => import('@widgetbot/react-embed'), { ssr: false });
+
+
+
 export default function Page3() {
 
   return (
