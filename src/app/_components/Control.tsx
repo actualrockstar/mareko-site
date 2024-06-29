@@ -97,7 +97,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
 
 
       return (
-      <div className="grid grid-cols-1 grid-rows-[70px_145px_10px] sm:grid-rows-[60px_130px_10px] lg:grid-rows-[70px_160px_10px] justify-center">
+      <div className="grid grid-cols-1 grid-rows-[70px_10px_10px] sm:grid-rows-[60px_10px_10px] lg:grid-rows-[70px_100px_10px] justify-center">
         <div className="flex justify-center">
             
             <Button onClick={handlePrevious}><IoPlaySkipBackSharp color="white"/></Button>
@@ -113,11 +113,10 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                       <IoMdVolumeHigh color="white"/>
                     )}
             </Button></div>
-        <div className="row-start-2 pt-5 sm:pt-5 lg:pt-5">
-          Volume
-          <div className="volume top-1/3 sm:top-14 lg:top-12">
+        <div className="row-start-2 pt-2 sm:pt-2 lg:pt-2">
+          <div className="volume flex justify-center">
             <input
-                className="w-[90px] sm:w-[100px] lg:w-[90px] -left-[5%] -top-2"
+                className="w-[80%]"
                 type="range"
                 min={0}
                 max={100}
@@ -127,16 +126,7 @@ export default function Control({audioRef, progressBarRef, duration, setTimeProg
                     background: `linear-gradient(to right, #da86be ${volume}%, #7f7b5e ${volume}%)`,
                 }}
                 />
-                <input
-                className="w-[90px] sm:w-[100px] lg:w-[90px] -top-2"
-                type="range"
-                min={0}
-                max={100}
-                value={volume}
-                style={{
-                    background: `linear-gradient(to right, #da86be ${volume}%, #7f7b5e ${volume}%)`,
-                }}
-                />
+                
                 
                 
             </div>

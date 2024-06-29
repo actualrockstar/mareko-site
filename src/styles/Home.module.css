@@ -27,14 +27,21 @@
 }
 .footer{
     display: flex;
+    justify-content: center;
+    align-items: center;    
     color: white;
     position: relative;
-    margin-top: 25%;
+    margin-top: 5%;
     bottom: 0;
 }
 .footer div{
     -webkit-transition-property: transform;
     transition-property: transform;
+    text-align: center;
+}
+.footer img{
+    margin-left: auto;
+    margin-right: auto;
 }
 .footer div:hover{
     transform: scale(1.2);

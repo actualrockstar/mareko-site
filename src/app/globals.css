@@ -19,7 +19,7 @@
 body {
   color: var(--foreground-rgb);
   background: var(--background-start-rgb);
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=46763"), auto;
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=46763"), default;
 }
 
 @layer utilities {

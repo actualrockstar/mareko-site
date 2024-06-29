@@ -37,7 +37,7 @@ export default function Page2() {
         <div className={styles.window}>
           <Link href='https://www.instagram.com/mareko.xyz/'>INSTAGRAM</Link>
           <div className={styles.content}>
-            <Link href='https://www.instagram.com/mareko.xyz/'><img src="/cd.gif" alt="alien cat" /></Link>
+            <Link href='https://www.instagram.com/mareko.xyz/'><img src="/cd-trans.gif" alt="alien cat" /></Link>
             </div>
         </div>
       </div>
@@ -61,19 +61,20 @@ export default function Page2() {
         </div>
       </div>
       
-      <footer className={styles.footer}>
-      <div>  
-            <Link href='./contact'> <img className="animate-bounce relative right-1 top-0 w-[50%]" src="nokia.gif"></img></Link>
-       </div>
-        <div>
-            <Link href="/"><img className="relative float-l w-[50%] animate-bounce-slow" src="./money.gif"></img></Link>
-        </div>  
-        <div>
-          <Link href='/world'><img className= 'animate-bounce-slow w-[50%]' src="/cute-gun.gif"></img></Link>
+      <div className={styles.footer}>
+        <div>  
+              <Link href='./contact'> <img className="animate-bounce relative right-1 top-0 w-[50%]" src="nokia.gif"></img> 
+              <p>Contact</p></Link>
         </div>
-
-       
-      </footer>
+          <div>
+              <Link href="/social"><img className="relative float-l w-[50%] animate-bounce-slow pb-6" src="./money.gif"></img>
+              <p>Social Media</p></Link>
+          </div>  
+          <div>
+            <Link href='/world'><img className= 'animate-bounce-slow w-[50%]' src="/cute-gun.gif"></img>
+            <p>World</p></Link>
+          </div>
+      </div>
       <div className='absolute left-3'><p>malachite media 2024</p></div>
 </div>
     </div>

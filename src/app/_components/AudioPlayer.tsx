@@ -14,35 +14,35 @@ import { BiSolidAdjust } from "react-icons/bi";
 
 const tracks = [
     {
+        id: 1,
         title:'backseat',
         src: '/backseat.mp3',
         artist: 'Mareko'
     },
     {
-        title: 'Emmanuelle',
-        src:'/Emmanuelle.mp3',
-        artist: 'Ron Miller and his Orchestra'
+        id:2,        
+        title: 'Better Off',
+        src:'/Better Off Mixdown.mp3',
+        artist: 'Mareko'
     },
     {
-        title: 'La Decadanse',
-        src:'/La Decadanse.mp3',
-        artist: 'Ron Miller and his whores'
+        id: 3,        
+        title: 'I Hate The Rain',
+        src:'/I Hate The Rain Mixdown.mp3',
+        artist: 'Mareko'
     },
     {
-        title: 'Noelles Theme',
-        src:'/Noelles Theme.mp3',
-        artist: 'Ron Miller and his Orchestra'
+        id: 4,        
+        title: 'Blow It',
+        src:'/Blow It Mixdown.mp3',
+        artist: 'Mareko'
     },
     {
-        title: 'Same song but',
-        src:'/Noelles Theme.mp3',
-        artist: 'Ron Miller is a slut'
-    },
-    {
-        title: 'For testing purposes',
-        src:'/Noelles Theme.mp3',
-        artist: 'Ron schmiller'
-    },
+        id: 5,        
+        title: 'I Want To Swallow You Whole',
+        src:'/I Want To Swallow You Whole Mixdown.mp3',
+        artist: 'Mareko'
+    }
 ]
 
 
@@ -78,16 +78,17 @@ export default function AudioPlayer() {
     }
 
     const bgStyle = {
-        backgroundImage: `url(${bgImage.src})`,
-        backgroundColor: 'lightblue',
+        backgroundImage: ``,
+        backgroundColor: 'rgba(51, 170, 51, .6)',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
+        backgroundSize: '100% 100%',
+        
     }
 
     return (
       <div 
         style={bgStyle} 
-        className="audio-player relative w-[390px] sm:w-[500px] h-[550px] text-sm sm:text-base">
+        className="audio-player relative ml-5 w-[390px] sm:w-[500px] h-[400px] lg:h-[500px] text-sm sm:text-base">
         <div className="inner absolute w-[100%] p-5">
             <div className="pt-12">
             <DisplayTrack 
@@ -112,10 +113,10 @@ export default function AudioPlayer() {
                 tracks={tracks}
                 handleNext={handleNext}
                 />
-            <div className="absolute mt-6 ml-1 sm:mt-12 lg:mt-0 overflow-y-scroll overflow-x-hidden w-[90%] h-1/3 sm:h-1/3 lg:h-[30%]">
-            <div className="sm:h-35">
+            <div className="absolute mt-6 ml-1 sm:mt-12 lg:mt-1 overflow-y-scroll overflow-x-hidden w-[90%] h-1/3 sm:h-1/3 lg:h-[30%]">
+            <div className="sm:h-35" >
                 {tracks.map((song, i) => (
-                    <div onClick={() => selectSong(i)} className="cursor-pointer hover:bg-sky-700">
+                    <div key={song.id} onClick={() => selectSong(i)} className="cursor-pointer hover:bg-sky-700">
                     <span className="overflow-hidden truncate">{song.artist} - {song.title}</span>
                     </div>
                 ))}
