@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.window}>
-          <Link href="/shop">COP THE DRIP</Link>
+          <Link href="https://shop.mareko.xyz/">COP THE DRIP</Link>
           <div className={styles.content}>
             <a href="https://shop.mareko.xyz/">
             <img className='' src='/drip.gif' alt='sora drip'/>

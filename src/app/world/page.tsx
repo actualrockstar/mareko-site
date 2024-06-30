@@ -42,7 +42,7 @@ export default function Page3() {
           
         <AudioPlayer></AudioPlayer>
         </div>
-        <p className="mt-6 mb-2 drop-shadow-lg text-center bg-sky-500/50">that time i was interviewed on Maroon Radio</p>
+        <p className="mt-6 mb-2 drop-shadow-lg text-center bg-sky-500/50">that time i was interviewed on Marooned Radio</p>
         <div className="flex justify-center">
           
         <iframe width="400" height="315" src="https://www.youtube.com/embed/l2ZGvPBaRZU?si=Q-2KyVAyl_kkE3aF" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>          
