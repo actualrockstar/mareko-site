@@ -81,9 +81,9 @@ export default function Home() {
       </div>
       <div className="flex">
         <div className={styles.window}>
-          <Link href="/shop">MERCH</Link>
+          <Link href="https://shop.mareko.xyz/">MERCH</Link>
           <div className={styles.content} >
-            <a href="/shop">
+            <a href="https://shop.mareko.xyz/">
             <img className='' src='/infinite-void.gif' alt='infinite void'/>
             </a>
           </div>
