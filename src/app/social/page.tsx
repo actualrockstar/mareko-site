@@ -60,7 +60,7 @@ export default function Page2() {
           </div>
         </div>
       </div>
-      
+      <Link href="/"><p className='animate-bounce-slow pt-6'>$$ Back to Home $$</p></Link>
       <div className={styles.footer}>
         <div>  
               <Link href='./contact'> <img className="animate-bounce relative right-1 top-0 w-[50%]" src="nokia.gif"></img> 

@@ -63,8 +63,8 @@ export default function Home() {
 
       <div>
         <div className={styles.window}>
-          <Link href="https://symphony.to/mareko-1/the-garden">MUSIC</Link>
-          <a href="https://symphony.to/mareko-1/the-garden">
+          <Link href="https://linktr.ee/mareko">MUSIC</Link>
+          <a href="https://linktr.ee/mareko">
           <div className={styles.content}>
           <img src="8a3c9e45af49fe253cf781d22174b68f.gif"></img><img src="/8b77e29ce4f29ab1fb4e6970a3608d13.gif"></img> <img src="8a3c9e45af49fe253cf781d22174b68f.gif"></img>
           </div></a>

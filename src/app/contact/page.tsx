@@ -7,7 +7,7 @@ export default function Contact() {
     <div className='text-center'>
       <h1 className='text-6xl'>Contact</h1>
       <Image className='relative m-auto' src='/alien-cat.gif' width={500} height={500} alt={'alien cat'}></Image>
-        <a className='text-3xl' href="mailto:marekomgmt@gmail.com">marekomgmt@gmail.com</a>
+        <a className='text-2xl' href="mailto:marekomgmt@gmail.com">marekomgmt@gmail.com</a>
 
     <Link href="/"><p className='animate-bounce-slow pt-6'>$$ Back to Home $$</p></Link>
     <div className={styles.footer}>
